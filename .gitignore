@@ -1,3 +1,7 @@
 
 application/config/config.php
 application/config/database.php
+application/controllers/install/database.sql
+application/controllers/install/html.php
+application/controllers/install/requirements.php
+application/controllers/install/Start.php
