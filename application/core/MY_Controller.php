@@ -305,7 +305,7 @@ class Front_Controller extends CI_Controller
 
     protected function load_theme($content = null, $layout = true)
     {
-
+     
         $this->data['main_menus']     = '';
         $this->data['school_setting'] = $this->school_details;
         $this->data['front_setting']  = $this->front_setting;
@@ -315,23 +315,28 @@ class Front_Controller extends CI_Controller
         if (count($menu_list) > 0) {
             $this->data['main_menus'] = $this->cms_menuitems_model->getMenus($menu_list['id']);
         }
-
+      
         if (count($footer_menu_list) > 0) {
             $this->data['footer_menus'] = $this->cms_menuitems_model->getMenus($footer_menu_list['id']);
         }
         $this->data['layout_type'] = $layout;
-        $this->data['header']      = $this->load->view('themes/' . $this->theme_path . '/header', $this->data, true);
-
-        $this->data['slider'] = $this->load->view('themes/' . $this->theme_path . '/home_slider', $this->data, true);
-
-        $this->data['footer'] = $this->load->view('themes/' . $this->theme_path . '/footer', $this->data, true);
-
         $this->base_assets_url = 'backend/' . THEMES_DIR . '/' . $this->theme_path . '/';
 
         $this->data['base_assets_url'] = base_url() . $this->base_assets_url; 
+        $this->data['header']      = $this->load->view('themes/' . $this->theme_path . '/header', $this->data, true);
+
+        $view_path = APPPATH.'views';
+        if(@file_exists("$view_path/home_slider.php")){
+            $this->data['slider'] = $this->load->view('themes/' . $this->theme_path . '/home_slider', $this->data, true);
+        }
+      
+
+        $this->data['footer'] = $this->load->view('themes/' . $this->theme_path . '/footer', $this->data, true);
+        
         $is_captcha                    = $this->captchalib->is_captcha('admission');
         $this->data["is_captcha"]      = $is_captcha;
-
+      
+       
         if ($layout == true) {
             $this->data['content'] = (is_null($content)) ? '' : $this->load->view(THEMES_DIR . '/' . $this->theme_path . '/' . $content, $this->data, true);
             $this->load->view(THEMES_DIR . '/' . $this->theme_path . '/layout', $this->data);
@@ -367,6 +372,7 @@ class Front_Controller extends CI_Controller
         $this->data['base_assets_url'] = BASE_URI . $this->base_assets_url;
 
         $this->data['content'] = (is_null($content)) ? '' : $this->load->view(THEMES_DIR . '/' . $this->theme_path . '/' . $content, $this->data, true);
+      
         $this->load->view(THEMES_DIR . '/' . $this->theme_path . '/layout', $this->data);
 
     }

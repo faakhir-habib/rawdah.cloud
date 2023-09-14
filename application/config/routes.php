@@ -76,6 +76,7 @@ $route['cbseexam'] = 'welcome/cbseexam';
 
 $route['online_course'] = 'course';
 
+$route['teachers'] = 'welcome/teachers_view';
 
 
  

@@ -1,0 +1,371 @@
+:root{
+    --green-primary: #56853C;
+    --dark-gray: #707070;
+    --off-white: #F8F2E3;
+    --golden: #BF9743;
+    --black-primery: #23211E;
+    --blue: #003D55;
+    --dark-blue: #023D55;
+    --golden-light: #BE9642;
+    --golden-dark: #AD9153;
+    --white-primary: #EFEFEF;
+    --dark-white: #00000029;
+}
+/* globel css  */
+@font-face {
+  font-family: 'Berlingske Serif';
+  src: url('../fonts/Berlingske Serif/BerlingskeSerif-Regular.woff2') format('woff');
+  /* / Add additional font formats and file paths if necessary / */
+  font-weight: normal;
+  font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  color: white;
+  text-decoration: none;
+  background-color: var(--golden)
+}
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+
+hr {
+  margin: 1rem 0;
+  color: inherit;
+  border: 0;
+  border-top: 1px solid;
+  opacity: 0.25;
+}
+.inner-section{
+    padding: 150px 0;
+}
+
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-family: "Berlingske Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+h1, .h1 {
+  font-size: calc(1.375rem + 1.5vw);
+}
+@media (min-width: 1200px) {
+  h1, .h1 {
+    font-size: 2.5rem;
+  }
+}
+
+h2, .h2 {
+  font-size: calc(1.325rem + 0.9vw);
+}
+@media (min-width: 1200px) {
+  h2, .h2 {
+    font-size: 2rem;
+  }
+}
+
+h3, .h3 {
+  font-size: calc(1.3rem + 0.6vw);
+}
+@media (min-width: 1200px) {
+  h3, .h3 {
+    font-size: 1.75rem;
+  }
+}
+
+h4, .h4 {
+  font-size: calc(1.275rem + 0.3vw);
+}
+@media (min-width: 1200px) {
+  h4, .h4 {
+    font-size: 1.5rem;
+  }
+}
+
+h5, .h5 {
+  font-size: 1.25rem;
+}
+
+h6, .h6 {
+  font-size: 1rem;
+}
+
+.section-title{
+  margin-bottom: 97px;
+  font-size: 4rem;
+}
+
+@media (max-width: 768px) {
+  .section-title{
+    margin-bottom: 60px;
+    font-size: 2rem;
+  }
+  }
+
+
+
+.btn{
+    border-radius: 6px !important;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+.btn-outline-primary{
+    border: 1.5px solid var(--dark-blue);
+    color: var(--dark-blue);
+    border-radius: 6px;
+}
+.btn-outline-primary:hover,.btn-outline-primary:active,.btn-outline-primary:focus{
+    background-color: var(--dark-blue) !important;
+    border: 1.5px solid var(--dark-blue) !important;
+    color: white !important;
+}
+.btn-success{
+  background-color: var(--green-primary);
+}
+
+.navbar{
+    background-color: var(--off-white);
+    position: sticky;
+    z-index: 1;
+    left: 0;
+    top: 0;
+}
+
+.navbar-nav .nav-item .nav-link:hover{
+    color: var(--golden) !important;
+}
+.navbar-nav .nav-item .nav-link{
+   font-size: 17px;
+}
+.navbar-nav .nav-item .active{
+    color: var(--golden) !important;
+}
+.navbar .navbar-brand img{
+  width: 13rem;
+}
+.btn .btn-inner-img{
+  width: 5rem;
+}
+/* hum burger menu btn css start  */
+.hamburger {
+    cursor: pointer;
+  }
+  
+  .hamburger input {
+    display: none;
+  }
+  
+  .hamburger svg {
+    /* The size of the SVG defines the overall size */
+    height: 3em;
+    /* Define the transition for transforming the SVG */
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .line {
+    fill: none;
+    stroke: var(--blue);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1;
+    /* Define the transition for transforming the Stroke */
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .line-top-bottom {
+    stroke-dasharray: 12 63;
+  }
+  
+  .hamburger input:checked + svg {
+    transform: rotate(-45deg);
+  }
+  
+  .hamburger input:checked + svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+  }
+  .navbar-toggler{
+    border: none;
+  }
+  
+/* hum burger menu btn css ends  */
+
+/* hero starts */
+.hero-bg{
+background: url(../img/hero-background.svg) no-repeat;
+background-position: center;
+background-size: cover;
+width: 100%;
+height:700px;
+}
+.hero-heading {
+  text-align: center;
+}
+
+
+/* about section start
+  */
+  .about-section{
+    background: url(../img/about-background.svg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+  }
+  .about-section .inner-about{
+    margin-left: 24rem;
+  }
+  @media (max-width: 1000px) {
+    .about-section .inner-about{
+      margin-left: 0;
+    }
+    }
+  .about-section .inner-about h1{
+    text-align: left;
+   color: white;
+  }
+  .about-section .inner-about p{
+   color: white;
+   text-align: justify;
+   margin-bottom: 30px;
+  }
+  .about-section .inner-about ul li{
+    color: white;
+   text-align: justify;
+   margin-bottom: 20px;
+  }
+  .about-section .inner-about ul{
+    list-style-image: url('../img/list.svg');
+    
+  }
+  .about-section .inner-about .last-para{
+   margin-bottom: 0;
+   margin-top: 60px;
+    
+  }
+
+/* our aim section start
+  */
+  .our-aim{
+    background: url(../img/our-aim-bg.svg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+  }
+  .our-aim .aim-video-img{
+  width: 3rem;
+    
+  }
+  
+  .our-aim .section-title{
+    color: white;    
+  }
+
+  /* objective start  */
+  .objective-sec{
+    background-color: var(--off-white);
+  }
+  .objective-sec .side-img{
+    width: 30rem;
+  }
+  .objective-sec .section-title{
+    color: var(--green-primary);
+  }
+  .objective-sec .inner-section ul{
+    list-style-image: url('../img/list-dark.svg');
+  }
+  .objective-sec .inner-section ul li{
+    text-align: justify;
+   margin-bottom: 20px;
+  }
+
+
+  /* view section start  */
+  .view-sec{
+    background: url(../img/vision-bg.svg) no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .view-sec p{
+    text-align: justify;
+   color: white;
+  }
+  .view-sec .section-title{
+   color: var(--golden);
+  }
+  .view-sec ul li{
+    text-align: justify;
+   margin-bottom: 20px;
+   color: white;
+  }
+  .view-sec ul{
+    list-style-image: url('../img/list-yellow.svg');
+  }
+
+  /* footer start  */
+  footer .footer-inner {
+    padding: 5rem 0 5rem 0;
+  }
+  footer .footer-inner .footer-title{
+    margin-bottom: 2rem;
+    font-size: 25px;
+    color: var(--golden-dark);
+
+  }
+ 
+  footer .footer-inner .footer-menu-items a{
+   text-decoration: none;
+    color: var(--blue);
+    margin-bottom: 1rem;
+  }
+  footer .footer-inner .footer-menu-items a:hover{
+    color: var(--golden)
+  }
+  .footer-copy-right{
+    background-color: var(--white-primary);
+    padding: 2rem 0 2rem 0;
+  }
+  .footer-copy-right p{
+    color: var(--golden);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .color-custom-blue{
+    color: var(--blue);
+  }
+  .color-custom-gold{
+    color: var(--golden)
+  }
+  @media (max-width: 992px) {
+    footer .footer-inner .footer-title{
+      margin-top: 3rem;
+    }
+    }
+
+
+
+    /* teachers section start  */
+    .teachers-hero-bg{
+        background: url(.../img/teachers-imgs/teachers-hero.png) no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height:700px;
+    
+    }

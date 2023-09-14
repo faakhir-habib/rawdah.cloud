@@ -1515,4 +1515,9 @@ class Welcome extends Front_Controller
 
     }
 
+
+    public function teachers_view(){
+        $this->load_theme('pages/view_teacher', $this->config->item('front_layout'));
+    }
+
 }
