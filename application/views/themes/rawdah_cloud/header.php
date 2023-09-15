@@ -22,9 +22,7 @@
           <li class="nav-item">
             <a class="nav-link" href="<?=base_url('teachers')?>">Teachers</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?=base_url('page/results')?>">Results</a>
-          </li>
+          
           <li class="nav-item">
             <a class="nav-link" href="#">Curriculum</a>
           </li>

@@ -58,7 +58,15 @@
 
                             <div class="form-group">    
                                 <textarea id="editor1" name="description" placeholder="" type="text" class="form-control ss" >
-                                    <?php echo set_value('description'); ?>
+                                <section class="hero-bg">
+                                   <div class="container">
+                                     <div class="inner-section">
+    
+                                         <?php echo set_value('description'); ?>
+                                      </div>
+                                    </div>
+                                </section>   
+                                
                                 </textarea>   
                                 <span class="text-danger"><?php echo form_error('description'); ?></span>
                             </div>
