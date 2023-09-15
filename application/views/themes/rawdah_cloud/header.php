@@ -15,26 +15,72 @@
       </label>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav gap-3 mx-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="<?=base_url('/')?>">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?=base_url('teachers')?>">Teachers</a>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link" href="#">Curriculum</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Classes & Calendar</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Parents</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Support Us</a>
-          </li>
+      <ul class="navbar-nav gap-3 mx-auto mb-2 mb-lg-0">
+                            <?php
+                            foreach ($main_menus as $menu_key => $menu_value) {
+                            
+                                $submenus = false;
+                                $cls_menu_dropdown = "";
+                                $menu_selected = "";             
+                                
+                                if ($menu_value['page_slug'] == $active_menu) {
+                                    $menu_selected = "active";
+                                }
+                                if (!empty($menu_value['submenus'])) {
+                                    $submenus = true;
+                                    $cls_menu_dropdown = "dropdown";
+                                }
+                                ?>
+
+                                <li class="nav-item <?php echo $menu_selected . " " . $cls_menu_dropdown; ?>" >
+                                    <?php
+                                    if (!$submenus) {
+                                        $top_new_tab = '';
+                                        $url = '#';
+                                        if ($menu_value['open_new_tab']) {
+                                            $top_new_tab = "target='_blank'";
+                                        }
+                                        if ($menu_value['ext_url']) {
+                                            $url = $menu_value['ext_url_link'];
+                                        } else {
+                                            $url = site_url($menu_value['page_url']);
+                                        }
+                                        ?>
+
+                                        <a class="nav-link" href="<?php echo $url; ?>" <?php echo $top_new_tab; ?>><?php echo $menu_value['menu']; ?></a>
+
+                                        <?php
+                                    } else {
+                                        $child_new_tab = '';
+                                        $url = '#';
+                                        ?>
+                                        <a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $menu_value['menu']; ?> <b class="caret"></b></a>
+                                        <ul class="dropdown-menu"id="dropdownContent">
+                                            <?php
+                                            foreach ($menu_value['submenus'] as $submenu_key => $submenu_value) {
+                                                if ($submenu_value['open_new_tab']) {
+                                                    $child_new_tab = "target='_blank'";
+                                                }
+                                                if ($submenu_value['ext_url']) {
+                                                    $url = $submenu_value['ext_url_link'];
+                                                } else {
+                                                    $url = site_url($submenu_value['page_url']);
+                                                }
+                                                ?>
+                                                <li><a class="dropdown-item" href="<?php echo $url; ?>" <?php echo $child_new_tab; ?> ><?php echo $submenu_value['menu'] ?></a></li>
+                                                <?php
+                                            }
+                                            ?>
+
+                                        </ul>
+                                        <?php
+                                    }
+                                    ?>
+                                </li>
+                                <?php
+                            }
+                            ?>
+                        
          
           <li class="nav-item dropdown" id="dropdownBtn">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

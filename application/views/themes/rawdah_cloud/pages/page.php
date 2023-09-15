@@ -1,4 +1,12 @@
-<?php
+<section class="teachers-hero-bg">
+    <div class="container">
+      <div class="inner-section">
+    
+      <?php
     echo $page['description'];
-    echo "aa";
+    
 ?>
+        </div>
+    </div>
+  </section>  
+
