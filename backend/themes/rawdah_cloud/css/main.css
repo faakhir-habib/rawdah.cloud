@@ -14,7 +14,7 @@
 /* globel css  */
 @font-face {
   font-family: 'Berlingske Serif';
-  src: url('../fonts/Berlingske Serif/BerlingskeSerif-Regular.woff2') format('woff');
+  src: url('fonts/Berlingske Serif/BerlingskeSerif-Regular.woff2') format('woff');
   /* / Add additional font formats and file paths if necessary / */
   font-weight: normal;
   font-style: normal;

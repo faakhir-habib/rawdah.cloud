@@ -81,8 +81,7 @@
                             }
                             ?>
                         
-         
-          <li class="nav-item dropdown" id="dropdownBtn">
+                        <li class="nav-item dropdown" id="dropdownBtn">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Other
             </a>
@@ -92,7 +91,6 @@
               <li><a class="dropdown-item" href="#">Contact Us</a></li>
             </ul>
           </li>
-
 
         </ul>
         <div class="d-flex align-items-center gap-2">

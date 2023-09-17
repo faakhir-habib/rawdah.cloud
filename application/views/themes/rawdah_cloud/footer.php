@@ -141,20 +141,20 @@
         <div class="row footer-menu-items">
           <div class="col-6 d-flex flex-column">
            
-              <a href="">Home</a>
-              <a href="">Teachers</a>
-              <a href="">Curriculum</a>
-              <a href="">Learning & Progress</a>
-              <a href="">Classes & Calendar</a>
+              <a href="<?= base_url('page/home')  ?>">Home</a>
+              <a href="<?= base_url('page/teachers')  ?>">Teachers</a>
+              <a href="<?= base_url('page/curriculum')  ?>">Curriculum</a>
+              <a href="<?= base_url('page/learning')  ?>">Learning & Progress</a>
+              <a href="<?= base_url('page/classescalender')  ?>">Classes & Calendar</a>
           
           </div>
           <div class="col-6 d-flex flex-column">
          
-              <a href="">Parents</a>
-              <a href="">Support Us</a>
-              <a href="">Registration</a>
-              <a href="">FAQs</a>
-              <a href="">Contact Us</a>
+              <a href="<?= base_url('page/parents')  ?>">Parents</a>
+              <a href="<?= base_url('page/support-us')  ?>">Support Us</a>
+              <a href="<?= base_url('page/registration')  ?>">Registration</a>
+              <a href="<?= base_url('page/FAQs')  ?>">FAQs</a>
+              <a href="<?= base_url('page/contact')  ?>">Contact Us</a>
          
           </div>
         </div>
