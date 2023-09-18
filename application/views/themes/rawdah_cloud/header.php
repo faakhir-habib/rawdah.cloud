@@ -81,16 +81,16 @@
                             }
                             ?>
                         
-                        <li class="nav-item dropdown" id="dropdownBtn">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Other
+                        <li class="custom-nav-item custom-dropdown nav-item" id="custom-dropdownBtn">
+            <a class="custom-nav-link custom-dropdown-toggle nav-link" href="#" role="button" data-bs-toggle="custom-dropdown" aria-expanded="false" >
+              Other  <i class="bi bi-caret-down-fill"></i>
             </a>
-            <ul class="dropdown-menu" id="dropdownContent">
-              <li><a class="dropdown-item" href="#">Registration</a></li>
-              <li><a class="dropdown-item" href="#">FAQs</a></li>
-              <li><a class="dropdown-item" href="#">Contact Us</a></li>
+            <ul class="custom-dropdown-menu" id="custom-dropdownContent">
+              <li><a class="custom-dropdown-item dropdown-item" href="<?= base_url('page/registration')  ?>">Registration</a></li>
+              <li><a class="custom-dropdown-item" href="<?= base_url('page/FAQs')  ?>">FAQs</a></li>
+              <li><a class="custom-dropdown-item" href="<?= base_url('page/contact')  ?>">Contact Us</a></li>
             </ul>
-          </li>
+        </li>
 
         </ul>
         <div class="d-flex align-items-center gap-2">

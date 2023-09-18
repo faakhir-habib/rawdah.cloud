@@ -10,7 +10,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="<?php echo $base_assets_url; ?>css/bootstrap.min.css">
- 
+  <link rel="stylesheet" href="<?php echo $base_assets_url; ?>css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
   <script src="https://kit.fontawesome.com/5bc7a66ec9.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="<?php echo $base_assets_url; ?>css/main.css">
   <title>RAWDAH MADRASAH</title>
